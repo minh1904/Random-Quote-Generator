@@ -1,5 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400..800&display=swap');
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+html {
+  font-family: 'Wix Madefor Display', sans-serif;
+  font-size: 16px;
+  background-color: #10100e;
+}
+body {
+  min-height: 70vh;
+}
+h1 {
+  color: #ffffe3;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 150px 0 60px 0;
+  font-size: 60px;
+}
+.quote {
+  max-width: 650px;
+  min-height: 150px;
+  background-color: #ffffe3;
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+  margin: 0 auto;
+  border-radius: 30px;
+}
+.text {
+  margin: 0 auto;
+}
+.reload-button i {
+  background-color: #ffffe3;
+  margin-top: 30px;
+  font-size: 30px;
+  padding: 10px;
+  border-radius: 50%;
+}
+.reload-button {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
 }
