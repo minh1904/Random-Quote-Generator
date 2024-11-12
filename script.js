@@ -1,15 +1,13 @@
 'use strict';
-const btnReload = document.querySelector('.reload-button');
+const btnReload = document.querySelector('.reload-button i');
+const quoteText = document.querySelector('.text');
 
-let allQuotes = [];
-fetch('https://api.api-ninjas.com/v1/quotes') // Thay bằng URL của API bạn muốn gọi
-  .then((response) => response.json()) // Chuyển đổi dữ liệu JSON trả về từ API
-  .then((data) => {
-    allQuotes = data; // Lưu dữ liệu từ API vào mảng allQuotes
-  })
-  .catch((error) => console.error('Error fetching data:', error));
+function randomQuote() {
+  fetch('https://random-quotes-freeapi.vercel.app/api/random')
+    .then((res) => res.json())
+    .then((result) => {
+      quoteText.innerText = result.quote;
+    });
+}
 
-btnReload.addEventListener('click', function () {
-  const randomIndex = Math.floor(Math.random() * allQuotes.length);
-  document.querySelector('.text').textContent = allQuotes[randomIndex];
-});
+btnReload.addEventListener('click', randomQuote);

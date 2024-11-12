@@ -31,6 +31,7 @@ h1 {
 }
 .text {
   margin: 0 auto;
+  text-align: center;
 }
 .reload-button i {
   background-color: #ffffe3;
@@ -43,4 +44,8 @@ h1 {
   display: flex;
   justify-content: center;
   cursor: pointer;
+}
+.reload-button i:hover {
+  color: red;
+  transition: 300ms ease;
 }
